@@ -143,7 +143,6 @@ void hacks::PlayerThread(const Memory& memory) noexcept
 			const auto viewAngles = memory.Read< Vector3>(clientState + hazedumper::signatures::dwClientState_ViewAngles);
 			const auto aimPunch = memory.Read<Vector3>(localPlayer + hazedumper::netvars::m_aimPunchAngle) * 2;
 
-			auto bestFov = 4.f;
 			auto bestAngle = Vector3{ };
 
 			const auto localTeam = memory.Read<std::int32_t>(localPlayer + hazedumper::netvars::m_iTeamNum);
@@ -172,9 +171,9 @@ void hacks::PlayerThread(const Memory& memory) noexcept
 
 				const auto fov = std::hypot(angle.x, angle.y);
 
-				if (fov < bestFov)
+				if (fov < globals::bestFov)
 				{
-					bestFov = fov;
+					//globals::bestFov = fov;
 					bestAngle = angle;
 				}
 			}

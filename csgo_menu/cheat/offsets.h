@@ -23,6 +23,8 @@ namespace globals
 	//inline bool skinchanger = false;
 	inline bool triggerbot = false;
 	inline bool aimbot = false;
+
+	inline float bestFov = 4.f;
 }
 
 

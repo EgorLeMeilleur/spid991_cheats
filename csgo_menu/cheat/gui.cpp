@@ -241,7 +241,11 @@ void gui::Render() noexcept
 	ImGui::Checkbox("bunny hop", &globals::bunnyhop);
 	//ImGui::Checkbox("skin changer", &globals::skinchanger);
 	ImGui::Checkbox("trigger bot", &globals::triggerbot);
+	
 	ImGui::Checkbox("aim bot", &globals::aimbot);
+	ImGui::SameLine();
+	ImGui::SliderFloat("fov", &globals::bestFov, 0.f, 10.f);
+
 
 	ImGui::End();
 }
