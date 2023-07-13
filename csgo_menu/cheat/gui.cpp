@@ -237,7 +237,7 @@ void gui::Render() noexcept
 	ImGui::Checkbox("chams team", &globals::chamsTeam);
 	ImGui::ColorEdit3("chams team color", globals::chamsColorTeam);*/
 
-	ImGui::Checkbox("radar", &globals::radar);
+	ImGui::Checkbox("radar hack", &globals::radar);
 	ImGui::Checkbox("bunny hop", &globals::bunnyhop);
 	//ImGui::Checkbox("skin changer", &globals::skinchanger);
 	ImGui::Checkbox("trigger bot", &globals::triggerbot);
